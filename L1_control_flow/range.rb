@@ -7,4 +7,6 @@ elsif user_number >= 51 && user_number <= 100  # when user_number between 51 to 
     puts "Your number between 51 to 100"
 elsif user_number > 100 # when user_number greater than 100
     puts "your number is greater than 100" 
+else
+    puts "Your number is negative"
 end
