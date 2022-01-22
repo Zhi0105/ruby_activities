@@ -1,14 +1,14 @@
 class Geeks 
   
-    def publicMethod 
+    def public_method 
         puts "In Public!"
-        privateMethod
+        private_method
     end
   
       
     private 
   
-    def privateMethod 
+    def private_method 
         puts "In Private!"
     end
 end
@@ -18,4 +18,4 @@ end
 obj = Geeks.new
   
 # calling the public method of class Geeks 
-obj.publicMethod
+obj.public_method

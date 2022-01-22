@@ -1,13 +1,13 @@
 class Operations
-    def initialize(num, num2)
-        @num = num
-        @num2 = num2
+    def initialize(first_number, second_number)
+        @first_number = first_number
+        @second_number = second_number
     end
 
-    def getSum
-        puts "The sum is :" +  String(@num + @num2)
+    def get_sum
+        puts "The sum is :" +  String(@first_number + @second_number)
     end
 end
 
 sum = Operations.new(1, 2)
-sum.getSum
+sum.get_sum

@@ -1,29 +1,30 @@
 # Ruby program of Polymorphism using inheritance
 class Vehicle
-    def tyreType
+    def tyre_type
         puts "Heavy Car"
     end
 end
    
 
 class Car < Vehicle
-    def tyreType
+    def tyre_type
         puts "Small Car"
     end
 end
    
 class Truck < Vehicle
-    def tyreType
+    def tyre_type
         puts "Big Car"
     end
 end
   
 
 vehicle = Vehicle.new
-vehicle.tyreType()
+vehicle.tyre_type()
    
 vehicle = Car.new
-vehicle.tyreType()
+vehicle.tyre_type()
+
    
 vehicle = Truck.new
-vehicle.tyreType()
+vehicle.tyre_type()

@@ -14,15 +14,18 @@ end
   class User
 
     attr_reader :ip_address, :username
-    attr_writer :change_password
-
+    attr_writer :password
+  
     def initialize(username, password, ip_address)
         @username = username
         @password = password
         @ip_address = ip_address
     end
+
+    def change_password=(password)
+      puts "Password Changed!"
+    end
   
-    
     protected
     def login
       puts "#{username} logged in. IP address: #{ip_address}"
@@ -37,10 +40,6 @@ end
             self.login
         end
         
-        def change_password
-            puts "Password changed!"
-        end
-        
   end
   
   
@@ -49,10 +48,6 @@ end
     
         def buyer_login
             self.login
-        end
-
-        def change_password
-            puts "Password changed!"
         end
         
   end
@@ -64,15 +59,16 @@ end
   my_admin = Admin.new('avionuser', 'password', '127.0.0.1')
   my_admin.admin_login
   my_admin.edit_users_profile
-  my_admin.change_password
-
+  my_admin.change_password = 'new_password'
 
   
   buyer = Buyer.new('juan', 'password', '127.0.0.1')
 
   buyer.buyer_login
   buyer.buy  
-  buyer.change_password
+  buyer.change_password = 'new_password'
+
+
 
 
 
