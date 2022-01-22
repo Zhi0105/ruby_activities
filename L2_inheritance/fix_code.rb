@@ -14,15 +14,15 @@ end
   class User
 
     attr_reader :ip_address, :username
-    attr_writer :password
-  
+    
     def initialize(username, password, ip_address)
         @username = username
         @password = password
         @ip_address = ip_address
     end
 
-    def change_password=(password)
+    def change_password=(new_password)
+      @password = new_password
       puts "Password Changed!"
     end
   
