@@ -28,15 +28,10 @@ set first_name = 'Ivan',
 where id = 1;
 
 -- DELETE LAST RECORD IN TABLE STUDENTS
-Delete from students where id = 6;
+Delete from students where id = (
+	select max(id) from students
+);
 
 
 -- RETRIEVE UPDATED DATA ORDERED BY ID
 select * from students order by id
-
-
-
-
-
-
-
